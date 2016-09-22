@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rivera</title>
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway|Nunito|Poiret+One|Lato:100" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Сообщаем браузеру что стр адаптированна для всех видов устройств-->
+  <link rel="stylesheet" href="{% static "login_page.css" %}" type="text/css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <div class="top-line"></div>
+  <div class="logo"> Rivera
+    <div style="font-family: 'Lato', sans-serif; display: inline-block">0.1</div>
+  </div>
+
+
+
+
+  <div class="name-field-wrapper">
+    <form action="/" method="post">
+      {% csrf_token %}
+      <div><input id="login" type="text" name="login" placeholder="Name" autofocus="true" maxlength="20"></div>
+      <div><input type="submit" value="Log in"></div>
+    </form>
+
+    <br><br>{% if name %} Hello, {{ name }}! {% endif %}
+            {% if error %} <b>ERROR!</b> {% endif %}
+  </div>
+
+</body>
+</html>
