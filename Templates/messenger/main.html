@@ -18,6 +18,15 @@
 
 <body>
 
+  <!-- =====================
+              FOR DESKTOPS. TODO: FIX THIS SHIT.
+       =====================
+  -->
+
+  <div class="desktop">Уменьши размер окна до мобильной версии!<br>Пока весь тестинг делаем на ней.</div>
+
+
+
 <!-- =====================
             HEADER
      =====================
@@ -32,14 +41,27 @@
 -->
 
 
+  <!-- <div class="messages-holst">
+    {% for message in messages %}
+      <div class="message">
+        <div style="color: #161827; display: inline"> {{ message.author.name }} </div>
+        <div style="color: grey; font-size: 10px; display: inline">{{ message.date }} {{message.time}} <br> </div>
+
+        <div style="margin-left: 10px;"> {{ message.text }} </div>
+        <div style="color: grey">__________________________</div>
+      </div>
+    {% endfor %}
+  </div> -->
+
+
   <div class="messages-holst">
     {% for message in messages %}
       <div class="message">
-        <div style="color: grey; display: inline">{{ message.date }} {{message.time}} |</div>
-        <div style="color: green; display: inline">| {{ message.author.name }} <br> </div>
-          <!-- {{ WhoAmI.name }} <br> </div> -->
-        {{ message.text }} <br>
-        <div style="color: grey">__________________________</div>
+        <div class="message-line">_____________________________</div>
+        <div class="message-author"> {{ message.author.name }} </div>
+        <div class="message-time"> {{message.time}} </div> <br>
+
+        <div class="message-text"> {{ message.text }} </div>
       </div>
     {% endfor %}
   </div>

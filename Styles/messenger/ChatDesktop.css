@@ -1,4 +1,4 @@
-a {color : inherit; quotes : '\201C' '\201D' '\2018' '\2019';text-decoration:none;}
+/*a {color : inherit; quotes : '\201C' '\201D' '\2018' '\2019';text-decoration:none;}
 
 .top-line {
   position: absolute;
@@ -44,4 +44,21 @@ input {
   text-align: right;
   font-size: 2vh;
   font-family: 'Raleway', sans-serif;
+}*/
+
+.desktop {
+  text-align: center;
+  font-size: 25px;
 }
+
+a {display: none}
+.top-line {display: none}
+.message-sending-wrapper {display: none}
+input {display: none}
+.send-button {display: none}
+.messages-holst {display: none}
+.message {display: none}
+.message-line {display: none}
+.message-author {display: none}
+.message-time {display: none}
+.message-text {display: none}

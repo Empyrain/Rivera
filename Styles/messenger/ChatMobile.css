@@ -1,10 +1,16 @@
+
+/*TODO: DELETE THIS SHIT*/
+.desktop {display: none}
+
+
 a {color : inherit; quotes : '\201C' '\201D' '\2018' '\2019'; text-decoration : none;}
 
 .top-line {
   position: fixed;
   top: 0; right: 0; left: 0;
-  height: 6%;
-  background-color: rgb(50, 171, 218);
+  height: 7%;
+  background-color: #161827;
+  /*rgb(50, 171, 218);*/
 }
 
 .messages-holst {
@@ -12,14 +18,6 @@ a {color : inherit; quotes : '\201C' '\201D' '\2018' '\2019'; text-decoration : 
   margin-bottom: 27%;
 }
 
-.message {
-  overflow-x: hidden;
-  padding-left: 2vh;
-  padding-top: 1vh;
-  padding-right: 10px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-}
 
 .message-sending-wrapper {
   position: fixed;
@@ -28,7 +26,7 @@ a {color : inherit; quotes : '\201C' '\201D' '\2018' '\2019'; text-decoration : 
   bottom: 0;
   width: 100%;
   height: 15%;
-  background-color: #F2F2F2;
+  background-color: #FAFAFA;
 }
 
 input {
@@ -40,7 +38,7 @@ input {
 
   border:none;
   color: black;
-  background-color: #F2F2F2;
+  background-color: #FAFAFA;
   text-align: left;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
@@ -61,4 +59,43 @@ input[type="submit"] {
   right: 0;
   bottom: 7vh;
   font-family: 'Raleway', sans-serif;
+}
+
+
+
+/*
+Message template
+*/
+
+.message {
+  overflow-x: hidden;
+  padding-left: 2vh;
+  padding-top: 1vh;
+  padding-right: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.message-line {
+  color: #D8D8D8;
+  font-size: 16px;
+}
+
+.message-author {
+  color: #0B0B61;
+  display: inline;
+  font-size: 16px;
+}
+
+.message-time {
+  display: inline;
+  margin-left: 95px;
+  font-size: 10px;
+  color: #BDBDBD;
+}
+
+.message-text {
+  margin-top: 4px;
+  margin-left: 10px;
+  color: black;
+  font-size: 15px;
 }

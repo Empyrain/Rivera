@@ -136,14 +136,9 @@ STATIC_ROOT = ''
 STATIC_URL = '/Styles/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "Styles"),
-    '/Users/alexander/Desktop/Rivera/Styles/messenger/',
-    # '/Users/alexander/Desktop/Rivera/Styles/images/',
-    '/Users/alexander/Desktop/Rivera/Styles/images/404/',
-    # 'images/',
-    # 'images/404/',
-    # '/messenger/',
-    # '/login',
-    '/Users/alexander/Desktop/Rivera/Styles/login/',
+    '/Users/alexander/Development/Rivera/Styles/messenger/',
+    '/Users/alexander/Development/Rivera/Styles/images/404/',
+    '/Users/alexander/Development/Rivera/Styles/login/',
     )
 
 
