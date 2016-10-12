@@ -5,6 +5,7 @@
 <head>
   <title>Rivera</title>
   <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway|Nunito|Poiret+One|Open+Sans|Lato:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Сообщаем браузеру что стр адаптированна для всех видов устройств-->
   <link rel="stylesheet" media="all and (max-width: 900px)" href="{% static "ChatMobile.css" %}" type="text/css">
   <link rel="stylesheet" media="all and (min-width: 901px)" href="{% static "ChatDesktop.css" %}" type="text/css">
@@ -32,7 +33,14 @@
      =====================
 -->
 
-  <div class="top-line"></div>
+  <div class="top-line">
+  <a href="/">
+    <div class="quadro-wrapper">
+    </div>
+    <div class="quadro-line-hor"> </div>
+    <div class="quadro-line-ver"> </div>
+  </a>
+  </div>
 
 
 <!-- =====================
@@ -40,26 +48,12 @@
      =====================
 -->
 
-
-  <!-- <div class="messages-holst">
-    {% for message in messages %}
-      <div class="message">
-        <div style="color: #161827; display: inline"> {{ message.author.name }} </div>
-        <div style="color: grey; font-size: 10px; display: inline">{{ message.date }} {{message.time}} <br> </div>
-
-        <div style="margin-left: 10px;"> {{ message.text }} </div>
-        <div style="color: grey">__________________________</div>
-      </div>
-    {% endfor %}
-  </div> -->
-
-
   <div class="messages-holst">
     {% for message in messages %}
       <div class="message">
-        <div class="message-line">_____________________________</div>
-        <div class="message-author"> {{ message.author.name }} </div>
-        <div class="message-time"> {{message.time}} </div> <br>
+        <div class="message-line">______________________________</div>
+        <p class="message-author"> {{ message.author.name }} </p>
+        <p class="message-time"> {{message.time}} </p> <br>
 
         <div class="message-text"> {{ message.text }} </div>
       </div>

@@ -4,17 +4,17 @@ from django import forms
 # Create your models here.
 
 class Users(models.Model):
-    """ Group of users """
+    ''' Group of users '''
     class Meta:
         db_table = "Users"
-    name = models.CharField(max_length=20, blank=False, default="incognito")
+    name = models.CharField(max_length=20, blank=False, default="Incognito")
     status = models.BooleanField(default=0, blank=False) # offline / online
     permissions = models.IntegerField(default=2, blank=False)
     # settings = models.OneToOneField(Settings, primary_key=True)
     # avatar = models.ImegaField
 
 class Message(models.Model):
-    """ Single message """
+    ''' Single message '''
     class Meta:
         db_table = "Message"
     message_id = models.AutoField(primary_key=True)
@@ -23,27 +23,15 @@ class Message(models.Model):
     date = models.CharField(max_length=10, blank=False, default='error')
     author = models.ForeignKey(Users, on_delete=models.CASCADE)
 
-    def check_message(self):
-        """ Check message before save to db """
-        while self.text[0] == ' ':
-            if len(self.text) == 1:
-                return False
-            else: self.text = self.text[1:]
-
-        while self.text[-1] == ' ':
-            self.text = self.text[:-1]
-
-        return True
-
 class MessageForm(forms.Form):
-    """ Message form """
+    ''' Message form '''
     class Meta:
         db_table = "MessageForm"
     """ Get data from form. After move the data to Message object. """
     message = forms.CharField(max_length=1000)                                  #TODO
 
 class Settings(models.Model):
-    """ User's settings """
+    ''' User\'s settings '''
     class Meta:
         db_table = "Settings"
     sound_notifications = models.BooleanField()

@@ -10,18 +10,17 @@ def index(request):
     return check_login_data(request, context)
 
 def check_login_data(request, context):
-    if request.method == "POST":
-
+    ''' Check auth data '''
+    if 'login' in request.POST:
         for user in Users.objects.all():
             if request.POST['login'] == user.name:
                 user.status = 1 #online. Do not foget get offline with logout
                 context['name'] = request.POST['login']
                 context['messages'] = Message.objects.all()
-
                 return render(request, 'messenger/main.html', context)
         else:
             context['error'] = 'Wrong login'
             return render(request, "login/login_page.html", context)
     else:
-        context['error'] = 'Wrong login'
+        context = {}
         return render(request, "login/login_page.html", context)

@@ -1,0 +1,6 @@
+*.pyc
+.DS_Store
+__pycashe__
+db.sqlite3
+migrations/
+wsgi.py
