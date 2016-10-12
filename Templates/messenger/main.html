@@ -12,6 +12,7 @@
   <script type="text/javascript">
     window.onload=function() {window.scrollTo(0,document.body.scrollHeight);}
   </script>
+
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 
   <!-- HEADER -->
   <div class="top-line">
-    <a href="/">
+    <a href="/" accesskey="x">
       <div class="quadro-square"></div>
       <div class="quadro-line-hor"> </div>
       <div class="quadro-line-ver"> </div>
@@ -45,8 +46,9 @@
   <div class="message-sending-wrapper">
     <form action="/messenger/" method="post">
       {% csrf_token %}
-      <input id="message" type="text" name="message" placeholder="Start typing..." autofocus="true" autocomplete="off">
-      <div class="send-button"> <input type="submit" value="SEND" \> </div>
+      <!-- <input id="message" type="text" name="message" placeholder="Start typing..." autofocus="true" autocomplete="off"> -->
+      <textarea id="message" name="message" rows="3" cols="100" autofocus="true" placeholder="Start typing..." autocomplete="off" accesskey="z"> </textarea>
+      <div id="send-button"> <input type="submit" value="SEND"> </div>
     </form>
   </div>
 

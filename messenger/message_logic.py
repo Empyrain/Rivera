@@ -26,10 +26,14 @@ def check_message(function):
     def wrapped(message_obj):
         succes_flag = True
 
-        if message_obj.text == '::delete::':  #TODO: remove
+        if message_obj.text == '::dlt::':
             for i in Message.objects.all():
                 i.delete()
                 succes_flag = False
+        if message_obj.text == '::upd::':
+            succes_flag = False
+            context = get_messages_from_db()
+            return render(request, 'messenger/main.html', context)
 
         while message_obj.text[0] == ' ':
             if len(message_obj.text) == 1:
@@ -61,7 +65,7 @@ def get_message_from_form(request):
         try:
             data_from_form = MessageForm(request.POST)
             message_text = data_from_form['message']
-            message_text = str(message_text)[74:-13]  #delete raw html tags
+            message_text = str(message_text)[74:-14]  #delete raw html tags
 
             message_obj = Message(
             text=message_text,

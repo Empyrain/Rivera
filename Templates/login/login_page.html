@@ -14,14 +14,14 @@
 
   <div class="top-line"></div>
   <div class="logo">
-    Rivera <div style="font-family: 'Lato', sans-serif; display: inline-block">0.26</div>
+    Rivera <div style="font-family: 'Lato', sans-serif; display: inline-block">0.27</div>
   </div>
 
 
   <div class="name-field-wrapper">
     <form action="/" method="post">
       {% csrf_token %}
-      <div><input id="login" type="text" name="login" placeholder="Name" autofocus="true" maxlength="20"></div>
+      <div><input id="login" type="text" name="login" placeholder="Name" autofocus="true" maxlength="20" autocomplete="false"></div>
       <div><input type="submit" value="Log in"></div>
     </form>
 
