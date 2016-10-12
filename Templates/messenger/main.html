@@ -1,71 +1,47 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Rivera</title>
-  <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway|Nunito|Poiret+One|Open+Sans|Lato:100" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Сообщаем браузеру что стр адаптированна для всех видов устройств-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans|Montserrat:400" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" media="all and (max-width: 900px)" href="{% static "ChatMobile.css" %}" type="text/css">
   <link rel="stylesheet" media="all and (min-width: 901px)" href="{% static "ChatDesktop.css" %}" type="text/css">
   <meta charset="utf-8">
 
   <script type="text/javascript">
-  window.onload=function() {window.scrollTo(0,document.body.scrollHeight); }
+    window.onload=function() {window.scrollTo(0,document.body.scrollHeight);}
   </script>
-
 </head>
 
 <body>
-
   <!-- =====================
-              FOR DESKTOPS. TODO: FIX THIS SHIT.
-       =====================
-  -->
-
+       FOR DESKTOPS. TODO, FIXME, XXX: FIX THIS SHIT. -->
   <div class="desktop">Уменьши размер окна до мобильной версии!<br>Пока весь тестинг делаем на ней.</div>
 
 
-
-<!-- =====================
-            HEADER
-     =====================
--->
-
+  <!-- HEADER -->
   <div class="top-line">
-  <a href="/">
-    <div class="quadro-wrapper">
-    </div>
-    <div class="quadro-line-hor"> </div>
-    <div class="quadro-line-ver"> </div>
-  </a>
+    <a href="/">
+      <div class="quadro-square"></div>
+      <div class="quadro-line-hor"> </div>
+      <div class="quadro-line-ver"> </div>
+    </a>
   </div>
 
-
-<!-- =====================
-            MESSAGES HOLST
-     =====================
--->
-
+  <!-- MESSAGES HOLST -->
   <div class="messages-holst">
     {% for message in messages %}
       <div class="message">
         <div class="message-line">______________________________</div>
         <p class="message-author"> {{ message.author.name }} </p>
         <p class="message-time"> {{message.time}} </p> <br>
-
         <div class="message-text"> {{ message.text }} </div>
       </div>
     {% endfor %}
   </div>
 
-
-<!-- =====================
-            SEND MESSAGES FOOTER
-     =====================
--->
-
+  <!-- SEND-MESSAGES FOOTER  -->
   <div class="message-sending-wrapper">
     <form action="/messenger/" method="post">
       {% csrf_token %}

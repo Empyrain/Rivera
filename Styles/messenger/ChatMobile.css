@@ -1,7 +1,6 @@
 
-/*TODO: DELETE THIS SHIT*/
+/*FIXME, XXX, TODO: DELETE THIS SHIT*/
 .desktop {display: none}
-
 
 a {color : inherit; quotes : '\201C' '\201D' '\2018' '\2019'; text-decoration : none;}
 
@@ -10,14 +9,12 @@ a {color : inherit; quotes : '\201C' '\201D' '\2018' '\2019'; text-decoration : 
   top: 0; right: 0; left: 0;
   height: 7%;
   background-color: #161827;
-  /*rgb(50, 171, 218);*/
 }
 
 .messages-holst {
   margin-top: 8%;
   margin-bottom: 27%;
 }
-
 
 .message-sending-wrapper {
   position: fixed;
@@ -35,13 +32,11 @@ input {
   margin-right: 20%;
   width: 70%;
   padding-top: 4%;
-  
   border:none;
   color: black;
   background-color: #FAFAFA;
   text-align: left;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -50,7 +45,6 @@ input[type="submit"] {
   width: none;
   border: none;
   font-size: 3vh;
-  font-family: 'Raleway', sans-serif;
   margin-right: 3vh;
 }
 
@@ -63,9 +57,7 @@ input[type="submit"] {
 
 
 
-/*
-Message template
-*/
+  /* > > > Message template  */
 
 .message {
   overflow-x: hidden;
@@ -106,10 +98,8 @@ Message template
 }
 
 
-/*
-  Quadro-button
-*/
-.quadro-wrapper {
+ /* > > > Quadro-button */
+.quadro-square {
   position: absolute;
   z-index: 1;
   width: 4.5vh;

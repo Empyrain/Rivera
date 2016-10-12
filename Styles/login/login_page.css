@@ -24,8 +24,6 @@ SMARTPHONES
     z-index: 1;
     top: 40%;
     width: 100%;
-
-    font-family: 'Raleway', sans-serif;
     text-align: center;
     color: black;
     font-size: 3vh;
@@ -41,7 +39,6 @@ SMARTPHONES
     color: black;
     text-align: center;
     font-size: 2.5vh;
-    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -61,25 +58,14 @@ SMARTPHONES
     padding: 0;
     text-align: center;
     font-size: 2.5vh;
-    font-family: 'Raleway', sans-serif;
   }
 
   .menu-wrapper {display: none;}
 }
 
-
-
-
-/*
-DESKTOP
-*/
-
+/*DESKTOP*/
 @media (min-width: 901px) {
-  .desktop {
-      text-align: center;
-      font-size: 25px;
-  }
-
+  .desktop {text-align: center;font-size: 25px;}
   .top-line {display: none;}
   .logo {display: none;}
   .slogan {display: none;}
